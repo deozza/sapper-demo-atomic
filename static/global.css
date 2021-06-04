@@ -99,6 +99,9 @@ nav,
 section {
 	display: block;
 }
+a, p {
+	font-family: 'Roboto', sans-serif;
+}
 
 body {
 	line-height: 1;
@@ -135,12 +138,12 @@ html {
 
 :root {
 	--grey-bg: #dbdde6;
-	--primary_bg: #0d6efd;
-	--primary_bg_hover: #240dfd;
-	--primary_border: #0d6efd;
-	--primary_border_hover: #240dfd;
-	--primary_text: #0d6efd;
-	--primary_text_hover: #240dfd;
+	--primary_bg: #b56d19;
+	--primary_bg_hover: #F2962F;
+	--primary_border: #b56d19;
+	--primary_border_hover: #F2962F;
+	--primary_text: #b56d19;
+	--primary_text_hover: #F2962F;
 	--secondary_bg: #e5e7e8;
 	--secondary_bg_hover: #caced0;
 	--secondary_border: #e5e7e8;

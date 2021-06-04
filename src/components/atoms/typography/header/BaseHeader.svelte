@@ -38,6 +38,7 @@
     h5,
     h6 {
         margin: 20px 0 20px 0;
+        font-family: 'MedievalSharp', cursive;
     }
 
     .light {
