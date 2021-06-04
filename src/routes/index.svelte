@@ -12,7 +12,5 @@
     <title>hey</title>
 </svelte:head>
 
-
-
 <BaseHeader baseHeaderModel={header} />
 <BaseParagraph baseParagraphModel="{paragraph}" />

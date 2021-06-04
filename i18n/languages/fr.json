@@ -1,0 +1,9 @@
+{
+  "index": {
+    "menu": {
+      "home": "Accueil",
+      "signin": "Connexion",
+      "signup": "Inscription"
+    }
+  }
+}

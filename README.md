@@ -72,7 +72,7 @@ Sapper expects to find two directories in the root of your project —  `src` an
 
 ### src
 
-The [src](src) directory contains the entry points for your app — `client.js`, `server.js` and (optionally) a `service-worker.js` — along with a `template.html` file and a `routes` directory.
+The [src](src) directory contains the entry points for your app — `client.ts`, `server.ts` and (optionally) a `service-worker.ts` — along with a `template.html` file and a `routes` directory.
 
 
 #### src/routes
@@ -106,7 +106,7 @@ This directory is managed by Sapper and generated when building. It contains all
 
 The [static](static) directory contains static assets that should be served publicly. Files in this directory will be available directly under the root URL, e.g. an `image.jpg` will be available as `/image.jpg`.
 
-The default [service-worker.js](src/service-worker.js) will preload and cache these files, by retrieving a list of `files` from the generated manifest:
+The default [service-worker.ts](src/service-worker.js) will preload and cache these files, by retrieving a list of `files` from the generated manifest:
 
 ```js
 import { files } from '@sapper/service-worker';

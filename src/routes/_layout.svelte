@@ -1,3 +1,7 @@
+<script>
+    import { _ } from 'svelte-i18n';
+</script>
+
 <svelte:head>
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
 </svelte:head>
@@ -7,7 +11,7 @@
         <a href="/">RollingDice</a>
         <ul class="flex-row flex-between">
             <li>
-                <a href="/">Accueil</a>
+                <a href="/">{$_('index.menu.home')}</a>
             </li>
             <li>
                 <a href="/signin">Connexion</a>
