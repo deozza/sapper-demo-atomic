@@ -11,13 +11,13 @@
         <a href="/">RollingDice</a>
         <ul class="flex-row flex-between">
             <li>
-                <a href="/">{$_('index.menu.home')}</a>
+                <a href="/">{$_('layout_index.menu.home')}</a>
             </li>
             <li>
-                <a href="/signin">Connexion</a>
+                <a href="/signin">{$_('layout_index.menu.signin')}</a>
             </li>
             <li>
-                <a href="/signup">Inscription</a>
+                <a href="/signup">{$_('layout_index.menu.signup')}</a>
             </li>
         </ul>
     </div>
@@ -59,7 +59,7 @@
 
     nav > div > ul > li > a {
         padding: 10px 15px;
-        font-size: 24px;
+        font-size: 18px;
     }
 
     nav > div > ul > li > a:hover {
@@ -73,6 +73,6 @@
     }
 
     div.content {
-        margin-top: 100px
+        margin-top: 80px
     }
 </style>

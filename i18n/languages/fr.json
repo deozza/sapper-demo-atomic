@@ -1,9 +1,15 @@
 {
-  "index": {
+  "layout_index": {
     "menu": {
       "home": "Accueil",
       "signin": "Connexion",
       "signup": "Inscription"
+    },
+    "page_index":{
+      "intro_header":  "Bienvenue, aventurier",
+      "intro_paragraph":  "RollingDice est une plateforme pour aider les joueurs de jeux de rôles à davantage se concentrer sur la partie que sur son organisation. En vous connectant à votre compte, vous aurez accès à un tableau de bord pour retrouver vos fiches de personnage, les parties en cours, vos notes, votre inventaire et plus encore.",
+      "signin_header":  "Rejoindre l'aventure avec RollingDice",
+      "signin_button":  "Se connecter"
     }
   }
 }

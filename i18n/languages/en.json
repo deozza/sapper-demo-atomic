@@ -1,9 +1,13 @@
 {
-  "index": {
+  "layout_index": {
     "menu": {
       "home": "Home",
       "signin": "Signin",
       "signup": "Signup"
+    },
+    "page_index":{
+      "header_1":  "Hello, adventurer",
+      "paragraph_1":  "Hello, adventurer"
     }
   }
 }
