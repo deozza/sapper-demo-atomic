@@ -1,8 +1,9 @@
 export default class BaseParagraphModel {
     content: string
     style: string
+    additionalClass: string
 
-    constructor(content: string, style: string = 'light') {
+    constructor(content: string, style: string = 'light',additionalClass: string = '') {
         this.content = content
 
         const EXPECTED_STYLES: Array<string> = [
@@ -18,5 +19,7 @@ export default class BaseParagraphModel {
             throw Error("Style '"+style+"' is not a valid style for BaseParagraphModel")
         }
         this.style = style
+
+        this.additionalClass = additionalClass
     }
 }
