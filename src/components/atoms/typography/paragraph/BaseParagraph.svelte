@@ -4,7 +4,7 @@
     export let baseParagraphModel: BaseParagraphModel;
 </script>
 
-<p class="{baseParagraphModel.style}">{baseParagraphModel.content}</p>
+<p class="{baseParagraphModel.style} {baseParagraphModel.additionalClass}">{baseParagraphModel.content}</p>
 
 <style>
     .light {
