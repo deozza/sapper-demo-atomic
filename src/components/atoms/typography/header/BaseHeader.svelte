@@ -20,7 +20,7 @@
 
 <style>
     h1 {
-        font-size: 4vw;
+        font-size: 4rem;
     }
 
     h2 {
