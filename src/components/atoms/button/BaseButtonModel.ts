@@ -9,6 +9,7 @@ export default class BaseButtonModel {
     isOnlyIcon: boolean
     isOutlined: boolean
     isRound: boolean
+    event: string
 
     constructor(
         content: string,
@@ -68,5 +69,6 @@ export default class BaseButtonModel {
         this.isOnlyIcon = isOnlyIcon
         this.isOutlined = isOutlined
         this.isRound = isRound
+        this.event = 'buttonIsClicked'
     }
 }
