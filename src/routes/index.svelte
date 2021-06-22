@@ -22,11 +22,11 @@
     const headerCardRight: BaseHeaderModel = new BaseHeaderModel($_('layout_index.page_index.card_right_header'), 3, 'light')
     const paragraphCardRight: BaseParagraphModel = new BaseParagraphModel($_('layout_index.page_index.card_right_paragraph'), 'light')
 
-
+    const title = $_('layout_index.page_index.title')
 </script>
 
 <svelte:head>
-    <title>hey</title>
+    <title>{title}</title>
 </svelte:head>
 
 <section class="intro">
