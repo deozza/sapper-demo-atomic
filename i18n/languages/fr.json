@@ -6,10 +6,17 @@
       "signup": "Inscription"
     },
     "page_index":{
-      "intro_header":  "Bienvenue, aventurier",
-      "intro_paragraph":  "RollingDice est une plateforme pour aider les joueurs de jeux de rôles à davantage se concentrer sur la partie que sur son organisation. En vous connectant à votre compte, vous aurez accès à un tableau de bord pour retrouver vos fiches de personnage, les parties en cours, vos notes, votre inventaire et plus encore.",
-      "signin_header":  "Rejoindre l'aventure avec RollingDice",
-      "signin_button":  "Se connecter"
+      "intro_header": "Bienvenue, aventurier",
+      "intro_paragraph": "RollingDice est une plateforme pour aider les joueurs de jeux de rôles à davantage se concentrer sur la partie que sur son organisation. En vous connectant à votre compte, vous aurez accès à un tableau de bord pour retrouver vos fiches de personnage, les parties en cours, vos notes, votre inventaire et plus encore.",
+      "signin_header": "Rejoindre l'aventure avec RollingDice",
+      "signin_button": "Se connecter",
+      "cards_header": "Se concentrer sur la partie, pas son organisation",
+      "card_left_header": "Créez et enregistrez vos fiches de personnage",
+      "card_left_paragraph": "Le créateur de fiche de personnage vous aide à donner vie à vos avatars. Retrouvez dans le même endroit tous vos personnages, que vous les jouez ou non, ainsi que leurs progressions dans leurs différentes campagnes.",
+      "card_center_header": "Participez à des parties",
+      "card_center_paragraph": "Créez une campagne, invitez des joueurs, un maître du jeu, et lancez les dés ! Vous pouvez aussi gérer vos notes sur votre campagne, l'inventaire des personnages et leur évolution tout au long de la partie.",
+      "card_right_header": "Retrouvez l'univers de la campagne",
+      "card_right_paragraph": "En tant que maître du jeu ou joueur, retrouvez facilement les caractéristiques du monde dans lequel vous évoluez. A ce jour, vous pouvez déjà lister les objets existant dans votre univers, et bientôt vous pourrez gérer les lieux, les bâtiments et les PNJ."
     }
   }
 }
