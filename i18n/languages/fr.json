@@ -1,4 +1,17 @@
 {
+  "api": {
+    "useCases": {
+      "user": {
+        "register": {
+          "error": {
+            "repeatPassword": {
+              "invalid": "Les mots de passe ne correspondent pas."
+            }
+          }
+        }
+      }
+    }
+  },
   "layout_index": {
     "menu": {
       "home": "Accueil",
