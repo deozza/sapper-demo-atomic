@@ -3,12 +3,16 @@
 
     export let baseInputModel: BaseInputModele;
 
+    function handleInput(e){
+        baseInputModel.value = e.target.value
+    }
+
 </script>
 
 <li class="flex-column">
     <div class="flex-row input-row">
         <label class="{baseInputModel.style}" for="{baseInputModel.id}">{baseInputModel.label} <span v-if="input.required" class="required-field">*</span></label>
-        <input type="{baseInputModel.type}" id="{baseInputModel.id}" name="{baseInputModel.name}" required="{baseInputModel.required}">
+        <input type="{baseInputModel.type}" id="{baseInputModel.id}" name="{baseInputModel.name}" required="{baseInputModel.required}" value="{baseInputModel.value}" on:input={handleInput}>
     </div>
 </li>
 

@@ -7,6 +7,10 @@
     import BaseButton from "../components/atoms/button/BaseButton.svelte";
     import BaseInputModele from "../components/atoms/input/BaseInputModel";
     import BaseInput from "../components/atoms/input/BaseInput.svelte";
+    import BaseParagraphModel from "../components/atoms/typography/paragraph/BaseParagraphModel";
+    import BaseParagraph from "../components/atoms/typography/paragraph/BaseParagraph.svelte";
+    import BaseLinkModel from "../components/atoms/link/BaseLinkModel"
+    import BaseLink from "../components/atoms/link/BaseLink.svelte"
 
     const title = $_('layout_index.page_signin.title')
 
@@ -20,6 +24,8 @@
     ]
 
     const buttonSubmit: BaseButtonModel = new BaseButtonModel($_('layout_index.page_signin.button'), 'primary', 'button', 'normal', '', false, true)
+    const paragraphSignup: BaseParagraphModel = new BaseParagraphModel($_('layout_index.page_signin.paragraph_signup'), 'dark')
+    const linkToSignup: BaseLinkModel = new BaseLinkModel($_('layout_index.page_signin.link_to_signup'), 'primary', './signup')
 
 </script>
 
@@ -39,6 +45,9 @@
                         {/each}
                     </ul>
                     <BaseButton baseButtonModel="{buttonSubmit}" />
+
+                    <BaseParagraph baseParagraphModel="{paragraphSignup}" />
+                    <BaseLink baseLinkModel="{linkToSignup}" />
                 </div>
             </form>
         </div>
@@ -49,12 +58,13 @@
 
     section {
         background-color: var(--primary_bg);
-        height: 100vh;
+        min-height: 100vh;
     }
 
     section > div.container {
         margin-left: 10vw;
-        height: 100%;
+        margin-right: 10vw;
+        min-height: 100%;
     }
 
     section > div.container > :global(h1){
@@ -75,6 +85,10 @@
     form > div.flex-column > :global(p) {
         padding: 12px 0;
         text-align: center;
+    }
+
+    form > div.flex-column > ul {
+        width: 90%;
     }
 
     @media only screen and (min-width: 1024px) {

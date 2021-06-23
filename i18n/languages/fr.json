@@ -24,10 +24,20 @@
       "header": "Se connecter",
       "input_email": "Email",
       "input_password": "Mot de passe",
-      "button": "Se connecter"
+      "button": "Se connecter",
+      "paragraph_signup": "Pas encore de compte ?",
+      "link_to_signup": "M'inscrire"
     },
     "page_signup" :{
-      "title": "RollingDice - Créer un compte"
+      "title": "RollingDice - Créer un compte",
+      "header": "Créer un compte",
+      "input_email": "Email",
+      "input_username": "Nom d'utilisateur",
+      "input_password": "Mot de passe",
+      "input_repeat_password": "Confirmer le mot de passe",
+      "button": "S'inscrire",
+      "paragraph_signin": "Vous avez déjà un compte ?",
+      "link_to_signin": "Me connecter"
     }
   }
 }
