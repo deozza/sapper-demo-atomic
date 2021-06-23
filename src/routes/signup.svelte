@@ -12,6 +12,11 @@
     import BaseParagraph from "../components/atoms/typography/paragraph/BaseParagraph.svelte";
     import BaseLinkModel from "../components/atoms/link/BaseLinkModel"
     import BaseLink from "../components/atoms/link/BaseLink.svelte"
+    import {User} from "../api/useCases/User";
+    import {Result} from "../api/utils/useCaseResult/Result";
+
+    import {goto} from "@sapper/app"
+    import {Error} from "../api/utils/useCaseResult/types/Error";
 
     const title = $_('layout_index.page_signup.title')
 
@@ -21,19 +26,36 @@
     const passwordInput: BaseInputModele = new BaseInputModele('password', 'password', 'password', $_('layout_index.page_signup.input_password'), true, null, 'dark')
     const repeatPasswordInput: BaseInputModele = new BaseInputModele('password', 'repeatPassword', 'repeatPassword', $_('layout_index.page_signup.input_repeat_password'), true, null, 'dark')
 
-    const inputs = [
+    const inputs: Array<BaseInputModele> = [
         emailInput,
         usernameInput,
         passwordInput,
         repeatPasswordInput
     ]
 
-    const buttonSubmit: BaseButtonModel = new BaseButtonModel($_('layout_index.page_signup.button'), 'primary', 'submit', 'normal', '', false, true)
+    const buttonSubmit: BaseButtonModel = new BaseButtonModel($_('layout_index.page_signup.button'), 'primary', 'button', 'normal', '', false, true)
     const paragraphSignup: BaseParagraphModel = new BaseParagraphModel($_('layout_index.page_signup.paragraph_signin'), 'dark')
     const linkToSignup: BaseLinkModel = new BaseLinkModel($_('layout_index.page_signup.link_to_signin'), 'primary', './signin')
 
+    const userUseCase = new User()
+
     function createAccount(){
-        console.log('ouais')
+        const result : Result = userUseCase.register(inputs)
+
+        if(result.isSuccessful()){
+            goto("/", {})
+            return
+        }
+
+        for(const error: Error of result.errors){
+            const explodedErrorType: Array<string> = error.type.split('/')
+            switch (explodedErrorType[2]) {
+                case "repeatPassword": {
+                    inputs.find(i => i.name === explodedErrorType[2]).error = $_('api.useCases.user.register.error.'+explodedErrorType[2]+'.'+explodedErrorType[3])
+                }
+            }
+        }
+
         console.log(inputs)
     }
 
@@ -47,14 +69,14 @@
     <div class="container">
         <BaseHeader baseHeaderModel="{header}" />
         <div class="flex-column">
-            <form on:submit|preventDefault={createAccount}>
+            <form >
                 <div class="flex-column">
                     <ul>
                         {#each inputs as input}
-                            <BaseInput baseInputModel="{input}" bind:value={input.value}/>
+                            <BaseInput baseInputModel="{input}" />
                         {/each}
                     </ul>
-                    <BaseButton baseButtonModel="{buttonSubmit}" />
+                    <BaseButton on:buttonIsClicked={createAccount} baseButtonModel="{buttonSubmit}" />
 
                     <BaseParagraph baseParagraphModel="{paragraphSignup}" />
                     <BaseLink baseLinkModel="{linkToSignup}" />
