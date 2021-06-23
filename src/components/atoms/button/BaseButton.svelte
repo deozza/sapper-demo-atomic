@@ -5,8 +5,8 @@
 
     export let baseButtonModel: BaseButtonModel;
 
-    function dispatchButtonEvent(event){
-        dispatch(baseButtonModel.event)
+    function dispatchButtonEvent(e){
+        dispatch('buttonIsClicked')
     }
 </script>
 

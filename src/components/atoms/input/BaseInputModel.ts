@@ -6,6 +6,7 @@ export default class BaseInputModele{
     value: any
     required: boolean
     style: string
+    error: string
 
     constructor(type: string, id: string, name: string, label: string, required: boolean = false, value: any = null, style: string = 'light') {
 
@@ -41,5 +42,7 @@ export default class BaseInputModele{
             throw Error("Style '"+style+"' is not a valid style for BaseInputModel")
         }
         this.style = style
+
+        this.error = ''
     }
 }

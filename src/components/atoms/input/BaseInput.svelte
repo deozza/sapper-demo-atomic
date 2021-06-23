@@ -3,7 +3,7 @@
 
     export let baseInputModel: BaseInputModele;
 
-    function handleInput(e){
+    function handleInput(e) {
         baseInputModel.value = e.target.value
     }
 
@@ -11,10 +11,13 @@
 
 <li class="flex-column">
     <div class="flex-row input-row">
-        <label class="{baseInputModel.style}" for="{baseInputModel.id}">{baseInputModel.label} <span v-if="input.required" class="required-field">*</span></label>
+        <label class="{baseInputModel.style}" for="{baseInputModel.id}">{baseInputModel.label} {#if baseInputModel.required}<span class="required-field">*</span>{/if}</label>
         <input type="{baseInputModel.type}" id="{baseInputModel.id}" name="{baseInputModel.name}" required="{baseInputModel.required}" value="{baseInputModel.value}" on:input={handleInput}>
     </div>
 </li>
+
+
+<li class="error">{baseInputModel.error}</li>
 
 <style>
     li {
@@ -39,6 +42,10 @@
 
     li > div.input-row > input{
         flex: 2;
+    }
+
+    li.error {
+        color: var(--danger_text);
     }
 
     label.light {
