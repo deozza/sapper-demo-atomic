@@ -1,16 +1,15 @@
-import {User as UserEntity} from "../entities/User";
+import type {User as UserEntity} from "../entities/User";
 import {Error} from "../utils/useCaseResult/types/Error";
 import {INSERT_USERS} from "../graphqlQueries/User";
 
 import {auth} from "../../firebase";
-import firebase from "firebase";
-import UserCredential = firebase.auth.UserCredential;
+import type firebase from "firebase";
 import {mutation} from "svelte-apollo"
 
 export class User {
     public async addUserToFirebase(user: UserEntity) {
-        await auth().createUserWithEmailAndPassword(user.email, user.password)
-            .then((userCredential: UserCredential) => {
+        await auth.createUserWithEmailAndPassword(user.email, user.password)
+            .then((userCredential: firebase.auth.UserCredential) => {
                 user.uid = userCredential.user.uid
 
                 return [user, null]

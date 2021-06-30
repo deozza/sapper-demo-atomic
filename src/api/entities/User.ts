@@ -1,4 +1,4 @@
-import BaseInputModele from "../../components/atoms/input/BaseInputModel";
+import type BaseInputModele from "../../components/atoms/input/BaseInputModel";
 import {Error} from "../utils/useCaseResult/types/Error";
 
 interface EntityInterface {
@@ -19,7 +19,7 @@ export class User implements EntityInterface{
     repeatPassword?: string
 
     public createUser(inputs: Array<BaseInputModele>): User{
-        for(const input: BaseInputModele of inputs){
+        for(const input of inputs){
             switch (input.name) {
                 case 'email': this.email = input.value;break;
                 case 'username': this.username = input.value;break;

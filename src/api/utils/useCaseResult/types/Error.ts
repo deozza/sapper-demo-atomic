@@ -1,3 +1,5 @@
+import type ResultTypeInterface from "./ResultTypeInterface";
+
 export class Error implements ResultTypeInterface {
     code: number;
     type: string;

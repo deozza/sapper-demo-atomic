@@ -1,4 +1,4 @@
-import BaseInputModele from "../../components/atoms/input/BaseInputModel";
+import type BaseInputModele from "../../components/atoms/input/BaseInputModel";
 import {User as UserEntity, ValidationStates} from "../entities/User";
 import {User as UserService} from "../services/User";
 import {Result} from "../utils/useCaseResult/Result";

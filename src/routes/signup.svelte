@@ -47,7 +47,7 @@
             return
         }
 
-        for(const error: Error of result.errors){
+        for(const error of result.errors){
             const explodedErrorType: Array<string> = error.type.split('/')
             switch (explodedErrorType[2]) {
                 case "repeatPassword": {
